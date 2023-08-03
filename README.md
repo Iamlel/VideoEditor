@@ -44,7 +44,7 @@ Purge is used to remove the video and audio files that are downloaded separately
 This function is used to scale and do everything else to a single youtube video. You can use a loop, and do it for multiple videos that way. `vid` is the video id for the youtube video (a string).
 
 ### downloadVideo(id)
-This function is used to download a youtube video from its video id (a string) into the `{WORKING_DIR}/{id}/` directory. `WORKING_DIR` is used to store all the videos. Keep in mind that **the display and audio of the video will be saved seperately, and they will be named as according to the following: "V{id}v" and "V{id}a"**. The names will be made to work with the windows file system.
+This function is used to download a youtube video from its video id (a string) into the `{WORKING_DIR}/{id}/` directory. `WORKING_DIR` is used to store all the videos. Keep in mind that **the display and audio of the video will be saved seperately, and they will be named as according to the following: "Y{id}v" and "Y{id}a"**. The names will be made to work with the windows file system.
 
 ### main(videos, saferun = True)
 The main function is the one you should probably prefer to use. The inputs are `videos`, a list of the video ids, and `saferun`, which saves the video ids into a log file -- so that you do not run the function twice for the same video id (this is on by default). This also uses threading to speed up the video editing process. Each unique video id will receive its own thread.
